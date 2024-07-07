@@ -27,37 +27,6 @@
         <a href="bucketlist.html" class="btn-nav">Bucketlist</a>
       </div>
     </nav>
-    <div class="max-w-md mx-auto mt-8 p-4 bg-white shadow-md rounded-md">
-      <form id="addNoteForm">
-        <div class="mb-4">
-          <label for="name" class="block text-gray-700">Name</label>
-          <input
-            type="text"
-            id="name"
-            class="w-full px-3 py-2 border rounded-md"
-            required
-          />
-        </div>
-        <div class="mb-4">
-          <label for="message" class="block text-gray-700">Message</label>
-          <textarea
-            id="message"
-            class="w-full px-3 py-2 border rounded-md"
-            required
-          ></textarea>
-        </div>
-        <button
-          type="submit"
-          class="w-full bg-blue-500 text-white py-2 rounded-md"
-        >
-          Add Note
-        </button>
-      </form>
-    </div>
-
-    <div class="max-w-md mx-auto mt-8" id="notesList">
-      <!-- Notes will be dynamically added here -->
-    </div>
 
     <!-- Initialize AOS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
@@ -68,6 +37,6 @@
     <!-- Firebase Initialization -->
     <script type="module" src="./scripts/firebase.js"></script>
     <script type="module" src="./scripts/app.js"></script>
-    <script type="module" src="./scripts/notes.js"></script>
+    <script type="module" src="./scripts/gallery.js"></script>
   </body>
 </html>
