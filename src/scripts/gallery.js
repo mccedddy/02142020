@@ -39,15 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
     querySnapshot.forEach((doc) => {
       const itemData = doc.data();
       const itemDiv = document.createElement("div");
-      itemDiv.classList.add(
-        "p-2",
-        "bg-white",
-        "shadow-md",
-        "rounded-md",
-        "border",
-        "border-gray-300",
-        "relative"
-      );
+      itemDiv.classList.add("bg-white", "shadow-md", "relative");
       itemDiv.setAttribute("data-aos", "fade-up");
 
       const firstImageUrl = itemData.imageUrls[0];
