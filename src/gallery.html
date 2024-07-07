@@ -20,13 +20,79 @@
     <!-- Navbar -->
     <nav class="flex justify-between items-center px-4 py-2 bg-white shadow-md">
       <a href="index.html" class="text-3xl font-bold">02142020</a>
-      <!-- Title on the left -->
       <div class="flex space-x-4">
         <a href="gallery.html" class="btn-nav">Gallery</a>
         <a href="notes.html" class="btn-nav">Notes</a>
         <a href="bucketlist.html" class="btn-nav">Bucketlist</a>
       </div>
     </nav>
+
+    <!-- Upload Form -->
+    <div class="max-w-2xl mx-auto my-8 p-4 bg-white shadow-md rounded-md">
+      <form id="uploadForm">
+        <div class="mb-4">
+          <label for="caption" class="block text-gray-700">Caption</label>
+          <input
+            type="text"
+            id="caption"
+            class="w-full p-2 border border-gray-300 rounded-md"
+          />
+        </div>
+        <div class="mb-4">
+          <label for="images" class="block text-gray-700">Select Images</label>
+          <input
+            type="file"
+            id="images"
+            multiple
+            class="w-full p-2 border border-gray-300 rounded-md"
+          />
+        </div>
+        <button
+          type="submit"
+          class="w-full bg-blue-500 text-white p-2 rounded-md"
+        >
+          Upload
+        </button>
+      </form>
+    </div>
+
+    <!-- Gallery Grid -->
+    <div class="max-w-5xl mx-auto grid grid-cols-3 gap-4" id="galleryGrid">
+      <!-- Images will be dynamically added here -->
+    </div>
+
+    <!-- Modal for Enlarged Image -->
+    <div
+      id="imageModal"
+      class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center hidden"
+    >
+      <div class="bg-white p-4 rounded-md relative">
+        <span
+          id="closeModal"
+          class="absolute top-2 right-2 cursor-pointer text-xl"
+          >&times;</span
+        >
+        <button
+          id="prevImage"
+          class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-gray-500 text-white p-2 rounded-full hidden"
+        >
+          &larr;
+        </button>
+        <button
+          id="nextImage"
+          class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gray-500 text-white p-2 rounded-full hidden"
+        >
+          &rarr;
+        </button>
+        <img
+          id="modalImage"
+          src=""
+          alt="Enlarged Image"
+          class="max-w-full max-h-full"
+        />
+        <p id="modalCaption" class="mt-2 text-gray-700"></p>
+      </div>
+    </div>
 
     <!-- Initialize AOS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
