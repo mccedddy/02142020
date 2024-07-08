@@ -20,7 +20,6 @@
     <!-- Navbar -->
     <nav class="flex justify-between items-center px-4 py-2 bg-white shadow-md">
       <a href="../index.html" class="text-3xl font-bold">02142020</a>
-      <!-- Title on the left -->
       <div class="flex space-x-4">
         <a href="gallery.html" class="btn-nav">Gallery</a>
         <a href="notes.html" class="btn-nav">Notes</a>
@@ -29,7 +28,7 @@
     </nav>
 
     <!-- Bucketlist Form -->
-    <div class="max-w-xl mx-auto mt-8 p-4 bg-white shadow-md rounded-md">
+    <div class="max-w-md mx-auto mt-8 p-4 bg-white shadow-md rounded-md">
       <form id="addBucketlistItemForm">
         <div class="mb-4">
           <label for="title" class="block text-sm font-medium text-gray-700"
@@ -62,11 +61,15 @@
     </div>
 
     <!-- Bucketlist Display -->
-    <div class="max-w-xl mx-auto mt-8 p-4 bg-white shadow-md rounded-md">
+    <div class="max-w-md mx-auto mt-8 p-4 bg-white shadow-md rounded-md">
       <h2 class="text-xl font-bold mb-4">Not Done</h2>
-      <div id="notDoneList" class="space-y-4"></div>
+      <div id="notDoneList" class="space-y-4">
+        <!-- Not Done will be added here -->
+      </div>
       <h2 class="text-xl font-bold mt-8 mb-4">Done</h2>
-      <div id="doneList" class="space-y-4"></div>
+      <div id="doneList" class="space-y-4">
+        <!-- Done will be added here -->
+      </div>
     </div>
 
     <!-- Initialize AOS -->

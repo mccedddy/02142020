@@ -15,6 +15,17 @@
     <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-storage.js"></script>
+    <style>
+      #modalImage {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+      .modal-content {
+        width: 80vw;
+        height: 80vh;
+      }
+    </style>
   </head>
   <body class="bg-gray-100">
     <!-- Navbar -->
@@ -28,7 +39,7 @@
     </nav>
 
     <!-- Upload Form -->
-    <div class="max-w-2xl mx-auto my-8 p-4 bg-white shadow-md rounded-md">
+    <div class="max-w-md mx-auto my-8 p-4 bg-white shadow-md rounded-md">
       <form id="uploadForm">
         <div class="mb-4">
           <label for="caption" class="block text-gray-700">Caption</label>
@@ -57,7 +68,7 @@
     </div>
 
     <!-- Gallery Grid -->
-    <div class="max-w-5xl mx-auto grid grid-cols-3 gap-1" id="galleryGrid">
+    <div class="max-w-md mx-auto grid grid-cols-3 gap-1" id="galleryGrid">
       <!-- Images will be dynamically added here -->
     </div>
 
@@ -66,31 +77,26 @@
       id="imageModal"
       class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center hidden"
     >
-      <div class="bg-white p-4 rounded-md relative">
+      <div class="relative h-auto w-80 bg-white p-4">
         <span
           id="closeModal"
-          class="absolute top-2 right-2 cursor-pointer text-xl"
+          class="absolute top-0 right-0 text-white bg-black bg-opacity-50 text-2xl leading-5 pb-1 rounded-full cursor-pointer"
           >&times;</span
         >
+        <img id="modalImage" alt="Image" />
+        <p id="modalCaption" class="w-full text-center bg-white mt-4"></p>
         <button
           id="prevImage"
-          class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-gray-500 text-white p-2 rounded-full hidden"
+          class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-2 hidden"
         >
           &larr;
         </button>
         <button
           id="nextImage"
-          class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gray-500 text-white p-2 rounded-full hidden"
+          class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-2 hidden"
         >
           &rarr;
         </button>
-        <img
-          id="modalImage"
-          src=""
-          alt="Enlarged Image"
-          class="max-w-full max-h-full"
-        />
-        <p id="modalCaption" class="mt-2 text-gray-700"></p>
       </div>
     </div>
 

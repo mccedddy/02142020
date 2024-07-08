@@ -33,8 +33,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const displayGalleryItems = async () => {
     galleryGrid.innerHTML = ""; // Clear the grid
 
-    const q = query(collection(db, "gallery"), orderBy("timestamp", "desc"));
-    const querySnapshot = await getDocs(q);
+    const galleryQuery = query(
+      collection(db, "gallery"),
+      orderBy("timestamp", "desc")
+    );
+    const querySnapshot = await getDocs(galleryQuery);
 
     querySnapshot.forEach((doc) => {
       const itemData = doc.data();
